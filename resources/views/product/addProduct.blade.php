@@ -6,6 +6,9 @@
     <title>Dynamic Input Example</title>
     <!-- Include jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+
+    </style>
 </head>
 
 <body>
@@ -22,7 +25,7 @@
         <div id="dynamic">
             <!-- Initial input field -->
 
-            <div>
+            <div class="d-none">
                 <label for="input_total">Total:</label>
                 <input type="text" name="total[]" id="total" required>
                 <label for="input_name">Qty:</label>
@@ -57,6 +60,8 @@
                 // var inputField = $("#dynamic").clone();
                 inputField.find("input").val("");
                 $("#dynamic").append(inputField);
+                // $("#dynamic div").removeClass("d-none");
+
 
             });
 
